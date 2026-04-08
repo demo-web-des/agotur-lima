@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+.contenedor-texto {
+    height: 240px;          /* Altura fija */
+    overflow-y: auto;       /* Scroll vertical automático */
+    padding-top: 17px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px; /* Un borde para delimitar el área */
+    line-height: 1.6;       /* Mejora la legibilidad */
+}
+
+/* 1. Tamaño total de la barra */
+.contenedor-texto::-webkit-scrollbar {
+    width: 12px; /* Ancho para scroll vertical */
+    height: 12px; /* Alto para scroll horizontal */
+}
+
+/* 2. Fondo de la barra (track) */
+.contenedor-texto::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* 3. El tirador o parte móvil (thumb) */
+.contenedor-texto::-webkit-scrollbar-thumb {
+    background-color: #cc0400;
+  
+}
+
+/* 4. Color al pasar el ratón por el tirador */
+.contenedor-texto::-webkit-scrollbar-thumb:hover {
+    background-color: #990200;
+}
+
+/* 5. Las flechas (botones) */
+/* Botón base */
+.contenedor-texto::-webkit-scrollbar-button {
+    background-color: #990200;
+    height: 14px;
+    width: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px;
+}
+
+/* Flecha arriba */
+.contenedor-texto::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><polygon points='12,7 6,15 18,15' fill='white'/></svg>");
+}
+
+/* Flecha abajo */
+.contenedor-texto::-webkit-scrollbar-button:vertical:increment {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><polygon points='12,17 6,9 18,9' fill='white'/></svg>");
+}
